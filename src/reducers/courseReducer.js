@@ -7,12 +7,15 @@ export default function courseReducer(state = initalState.courses, action) {
           return action.courses;
 
           case types.CREATE_COURSE_SUCCESS:
+          console.log("CREATE-COURSE_SUCCESS-reducer",action);
             return [
                 ...state,
                 Object.assign({}, action.course)
             ];
 
             case types.UPDATE_COURSE_SUCCESS:
+
+          console.log("UPDATE-COURSE_SUCCESS-reducer",action.course);
             return [
                 ...state.filter(course => course.id !== action.course.id),
                 Object.assign({}, action.course)

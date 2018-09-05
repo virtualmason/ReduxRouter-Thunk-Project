@@ -51,7 +51,8 @@ CourseForm.propTypes = {
   onSave: React.PropTypes.func.isRequired,
   onChange: React.PropTypes.func.isRequired,
   loading: React.PropTypes.bool,
-  errors: React.PropTypes.object
+  errors: React.PropTypes.object,
+  saving: React.PropTypes.func
 
 };
 
