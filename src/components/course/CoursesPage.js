@@ -6,7 +6,7 @@ import CourseList from './CourseList';
 class CoursesPage extends React.Component {
     constructor(props) {
         super(props);
-    }    
+    }   
 
 
 
