@@ -53,4 +53,20 @@ function mapStateToProps(state, ownProps) {
  }
 //ownProps usefull with react-router
 export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //if we delete mDTP it will inject it automatically and we dispatch direct i.e this.props.dispatch,okay not best way
+//line 44 state is from redux root reducer not react state

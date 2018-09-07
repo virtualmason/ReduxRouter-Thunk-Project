@@ -7,7 +7,7 @@ class App extends React.Component {
     return (
       <div className="container-fluid">
         <Header />
-        {this.props.children}
+        {this.props.children} 
       </div>
     );
   }
@@ -18,3 +18,4 @@ App.propTypes = {
 };
 
 export default App;
+//line10 children of parent  react router
