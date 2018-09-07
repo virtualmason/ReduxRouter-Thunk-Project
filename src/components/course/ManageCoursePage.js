@@ -16,6 +16,7 @@ class ManageCoursePage extends React.Component {
     this.saveCourse = this.saveCourse.bind(this);
   }
 
+  
   updateCourseState(event) {
       const field = event.target.name;
       let course = this.state.course;
@@ -54,7 +55,8 @@ ManageCoursePage.contextTypes = {
 
 function getCourseById(courses, id) {
   const course = courses.filter(course => course.id == id);
-  if (course) return course[0]; //since filter returns an array
+
+  if (course.length) return course[0]; //since filter returns an array. course.length
   return null;
 }
 function mapStateToProps(state, ownProps) {
@@ -70,10 +72,10 @@ function mapStateToProps(state, ownProps) {
     category: ""
   };
   
-  if (courseId) {
+  if (courseId && state.courses.length > 0) {
     course = getCourseById(state.courses, courseId);
   }
-  
+
   const authorsFormattedForDropdown = state.authors.map(author => {
       return {
           value: author.id,
